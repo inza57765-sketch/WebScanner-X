@@ -1,6 +1,6 @@
 import requests
 from datetime import datetime
-
+from Terminal_Visualisation import affiches
 
 #url = input("url : ")
 url = "http://localhost:8081"
@@ -51,7 +51,19 @@ try:
             print("\n")
 
         affiche = {
+            "url":url,
+            "response":response,
+            "status_code":status_code,
+            "server":server,
+            "x_powered_by":x_powered_by,
+            "content_security_policy":content_security_policy,
+
+            "x_frame_options":x_frame_options,
+            "set_cookie":set_cookies,
+            "content_type":content_type
         }
+        affiches(affiche)
+        
 
     else:
         print("\nVerifie le protocol")

@@ -27,10 +27,14 @@ ce projet permet de scanner et récupérer les headers d'une requête sur un ser
 
 2. Installation des dépendances nécéssaires
    ```bash
-   pip -r install requirements.txt
+   pip install -r requirements.txt
    ```
+3. Entrez dans le dossier de WebScanner-X
+   ```bash
+   cd WebScanner-X
+   ```
+4. Lancez l'application par defaut
 
-3. Lancez l'application
    ```bash
    python WebScanner-X
    ```
