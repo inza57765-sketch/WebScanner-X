@@ -1,0 +1,6 @@
+#####
+# dev notes
+####
+
+Faute de frape dans le commit numéro 4:
+  nouvelle version plus structuré que la premièfe version
