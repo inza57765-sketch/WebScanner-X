@@ -4,31 +4,36 @@ ce fichier est le cœur de l'outil
 sais lui qui met en place l'ordre donné par le fichier d'orchestre
 """
 
-import requests
-from banner import Banner
-from Terminal_Visualisation import affiches
-from couleur import BLEU, JAUNE, RESET, ROUGE, VERT
+#####################################################|
+import random                                       #|
+import requests                                     #|
+from banner import Banner                           #|
+from Terminal_Visualisation import affiches         #|
+from couleur import BLEU, JAUNE, RESET, ROUGE, VERT #|
+#####################################################|
 
 
-#url = input("url : ")
-url = "http://localhost:8081"
+url = input("url : ")
+#url = "http://localhost:8081"
 
 
 Banner()
 
-head = {
+
+headers = {
         "User-Agent":"Mozilla/5.0 (Windows NT 10.0;  Win64; x64) AppleWebKit/537.36"
 }
 
+
 try:
-    response                = requests.get(url, headers=head, timeout=5)
+    response                = requests.get(url, headers=headers, timeout=5)
     status_code             = response.status_code
-    server                  = response.headers.get(f"{VERT}Server{RESET}",                  f"{ROUGE}Non indiqué{RESET}")
-    x_powered_by            = response.headers.get(f"{ROUGE}X-Powered-By{RESET}",           f"{VERT}Non indiqué{RESET} ")
-    content_security_policy = response.headers.get(f"{VERT}Content-Security-Policy{RESET}", f"{ROUGE}Absent{RESET}     ")
-    x_frame_options         = response.headers.get(f"{VERT}X-Frame-Options{RESET}",         f"{ROUGE}Absent{RESET}     ")
-    set_cookies             = response.headers.get(f"{ROUGE}Set-Cookie{RESET}",             f"{VERT}Absent{RESET}      ")
-    content_type            = response.headers.get(f"{VERT}Content-Type{RESET}",            f"{ROUGE}Non indiqué{RESET}")
+    server                  = response.headers.get(f"Server",                  f"{ROUGE}Non indiqué{RESET}")
+    x_powered_by            = response.headers.get(f"X-Powered-By",            f"{VERT}Non indiqué{RESET} ")
+    content_security_policy = response.headers.get(f"Content-Security-Policy", f"{ROUGE}Absent{RESET}     ")
+    x_frame_options         = response.headers.get(f"X-Frame-Options",         f"{ROUGE}Absent{RESET}     ")
+    set_cookies             = response.headers.get(f"Set-Cookie",              f"{VERT}Absent{RESET}      ")
+    content_type            = response.headers.get(f"Content-Type",            f"{ROUGE}Non indiqué{RESET}")
 
     result = {
         "url":url,
@@ -47,6 +52,7 @@ try:
        affiches(result)
 
 
+
 except requests.exceptions.ConnectionError:
     print(f"\n{ROUGE}Impossible de se connecté au site.{RESET}")
 
@@ -63,12 +69,14 @@ REQUESTS_CONNECT_EROR
     print("-"*59)
     print("\n")
 
-except requests.exceptions.Timeout:
-    print(f"\n{JAUNE}le site as mis trop de temps à repondre.{RESET}")
-    print(f"{BLEU}Timeout{RESET}.\n")
-
-except FileNotFoundError:
-    print(f"\n{ROUGE}Erreur : fichier{RESET}")
-
-except KeyboardInterrupt:
-    print(f"\n{BLEU}Interruption clavier.{RESET}")
+########################################################################|
+except requests.exceptions.Timeout:                                    #|
+    print(f"\n{JAUNE}le site as mis trop de temps à repondre.{RESET}") #|
+    print(f"{BLEU}Timeout{RESET}.\n")                                  #|
+                                                                       #|
+except FileNotFoundError:                                              #|
+    print(f"\n{ROUGE}Erreur : fichier{RESET}")                         #|
+                                                                       #|
+except KeyboardInterrupt:                                              #|
+    print(f"\n{BLEU}Interruption clavier.{RESET}")                     #|
+########################################################################|

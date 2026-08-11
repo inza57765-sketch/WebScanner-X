@@ -2,9 +2,11 @@
 """
 ce fichier est l'afficheur des resultats
 """
+
+
 # cette fonction permet de visualisé le résultat final
 def affiches(result):
-    
+
     print("\n\t\t\tla page est accessible....\n")
     print("="*59)
     print(result["url"])
