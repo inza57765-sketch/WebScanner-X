@@ -1,9 +1,8 @@
-# 🛡️ WebScanner-X
+# 🛡️ WebScanner-X 🛡️
 
-ce projet permet de scanner et récupérer les headers d'une requête sur un serveur web
+ce projet permet de scanner les headers de n'importe quel serveur web et detècté certains informations sensible à propos du serveur scanner
 
-
-# Structures 
+## Structures 🏗️
 
 ~/WebScanner 
 .
@@ -18,11 +17,11 @@ ce projet permet de scanner et récupérer les headers d'une requête sur un ser
 
 4 dossiers, 5 fichiers
 
-## Installation
+## Installation 🔧
 
 1. Clonez le dépôt
   ```bash
-  git clone https://github.com/WebScanner-X.git
+  git clone https://github.com/inza57765-sketch/WebScanner-X.git
   ```
 
 2. Installation des dépendances nécéssaires
@@ -38,3 +37,6 @@ ce projet permet de scanner et récupérer les headers d'une requête sur un ser
    ```bash
    python WebScanner-X
    ```
+## Paramètres ️⚙️
+vous pouvez aussi configuré l'outil depuis le fichier config.json
+
