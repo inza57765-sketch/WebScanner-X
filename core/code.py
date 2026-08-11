@@ -7,7 +7,7 @@ sais lui qui met en place l'ordre donné par le fichier d'orchestre
 import requests
 from banner import Banner
 from Terminal_Visualisation import affiches
-from response_analyse import response_analyse_run
+from couleur import BLEU, JAUNE, RESET, ROUGE, VERT
 
 
 #url = input("url : ")
@@ -21,14 +21,14 @@ head = {
 }
 
 try:
-    response                = requests.get(url, headers=head)
+    response                = requests.get(url, headers=head, timeout=5)
     status_code             = response.status_code
-    server                  = response.headers.get("Server",                  "Non indiqué")
-    x_powered_by            = response.headers.get("X-Powered-By",            "Non indiqué")
-    content_security_policy = response.headers.get("Content-Security-Policy", "Absent")
-    x_frame_options         = response.headers.get("X-Frame-Options",         "Absent")
-    set_cookies             = response.headers.get("Set-Cookie",              "Absent")
-    content_type            = response.headers.get("Content-Type",            "Non indiqué")
+    server                  = response.headers.get(f"{VERT}Server{RESET}",                  f"{ROUGE}Non indiqué{RESET}")
+    x_powered_by            = response.headers.get(f"{ROUGE}X-Powered-By{RESET}",           f"{VERT}Non indiqué{RESET} ")
+    content_security_policy = response.headers.get(f"{VERT}Content-Security-Policy{RESET}", f"{ROUGE}Absent{RESET}     ")
+    x_frame_options         = response.headers.get(f"{VERT}X-Frame-Options{RESET}",         f"{ROUGE}Absent{RESET}     ")
+    set_cookies             = response.headers.get(f"{ROUGE}Set-Cookie{RESET}",             f"{VERT}Absent{RESET}      ")
+    content_type            = response.headers.get(f"{VERT}Content-Type{RESET}",            f"{ROUGE}Non indiqué{RESET}")
 
     result = {
         "url":url,
@@ -42,14 +42,16 @@ try:
         "content_type":content_type
     }
 
-    response_analyse_run(result)        
+
+    if response.status_code == 200:
+       affiches(result)
 
 
 except requests.exceptions.ConnectionError:
-    print("\nImpossible de se connecté au site.")
+    print(f"\n{ROUGE}Impossible de se connecté au site.{RESET}")
 
     print("-"*59)
-    print("""
+    print(f"""{JAUNE}
 Voici quelques conseils :
 
       1. Désactivez le mode Avion.
@@ -57,13 +59,16 @@ Voici quelques conseils :
       3. Vérifiez le signal dans votre zone.
 
 REQUESTS_CONNECT_EROR
-    """)
+    {RESET}""")
     print("-"*59)
     print("\n")
 
 except requests.exceptions.Timeout:
-    print("\nle site as mis trop de temps à repondre.")
-    print("Timeout.\n")
+    print(f"\n{JAUNE}le site as mis trop de temps à repondre.{RESET}")
+    print(f"{BLEU}Timeout{RESET}.\n")
+
+except FileNotFoundError:
+    print(f"\n{ROUGE}Erreur : fichier{RESET}")
 
 except KeyboardInterrupt:
-    print("\nInterruption clavier.")
+    print(f"\n{BLEU}Interruption clavier.{RESET}")
