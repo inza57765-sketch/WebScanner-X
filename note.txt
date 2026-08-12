@@ -4,3 +4,7 @@
 
 Faute de frape dans le commit numéro 4:
   nouvelle version plus structuré que la premièfe version
+
+Faute de frape dans l'ecriture du commit 10:
+  ignoira
+ 
