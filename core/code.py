@@ -7,7 +7,7 @@ sais lui qui met en place l'ordre donné par le fichier d'orchestre
 ######################################################|
 import requests                                      #|
 from .banner import Banner                           #|
-from .logger import logger_run                        #|
+#from .logger import logger_run                      #|
 from .Terminal_Visualisation import affiches         #|
 from .couleur import BLEU, JAUNE, RESET, ROUGE, VERT #|
 ######################################################|
@@ -50,7 +50,7 @@ def Source_Code(url):
 
         if response.status_code == 200:
             affiches(result)
-            logger_run(result)
+            #logger_run(result)
 
 
 
@@ -73,17 +73,17 @@ def Source_Code(url):
     ########################################################################|
     except requests.exceptions.InvalidURL:                                 #|
         print("Erreur : url invalide\n")                                   #|
-    except requests.exceptions.MissingSchema:                              #|  
+    except requests.exceptions.MissingSchema:                              #|
         print("Erreur : url invalide\n")                                   #|
     except requests.exceptions.InvalidSchema:                              #|
-        print("Erreur : url invalide")                                     #|  
+        print("Erreur : url invalide")                                     #|
     except requests.exceptions.Timeout:                                    #|
         print(f"\n{JAUNE}le site as mis trop de temps à repondre.{RESET}") #|
-        print(f"{BLEU}Timeout{RESET}.\n")                                  #|                                                                    #|
+        print(f"{BLEU}Timeout{RESET}.\n")                                  #|
     except FileNotFoundError:                                              #|
-        print(f"\n{ROUGE}Erreur : fichier{RESET}")                         #|                                                                        #|
-    #except FileExistsError:
-        #print("\nErreur : fichier")
+        print(f"\n{ROUGE}Erreur : fichier{RESET}")                         #|
+    #except FileExistsError:                                               #|
+        #print("\nErreur : fichier")                                       #|
     except KeyboardInterrupt:                                              #|
         print(f"\n{BLEU}Interruption clavier.{RESET}")                     #|
     ########################################################################|
