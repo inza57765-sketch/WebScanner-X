@@ -1,0 +1,27 @@
+{
+  "name":"WebScanner-X",
+  "version":"0.01",
+  "package":"WebScanner",
+  "programming langua":"python==3.14.6",
+  "files":[
+    "README.md",
+    "LICENSE",
+    "WebScanner.py",
+    "config.json",
+    "settings.json",
+    "WebScanner.json",
+    "notes.txt",
+    "requirements.txt",
+    "code.py",
+    "Terminal_Visualisation.py",
+    "barre.py",
+    "couleurs.y",
+    "__init__.py"
+    ],
+    "folders":[
+      "docs",
+      "configs",
+      "logs",
+      "core"
+    ]
+}

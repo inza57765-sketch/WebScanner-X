@@ -1,3 +1,6 @@
 {
-    "ScreenClean":false
+  "ScreenClean":false,
+  "generate_Logs":false,
+  "HtmlCat":false,
+  "UrlRead_File":false
 }

@@ -1,6 +1,6 @@
 
 from datetime import datetime
-from .couleur import BLEU, INIT, JAUNE, LUMINEUX, RESET, ROUGE, VERT
+from .couleurs import BLEU, INIT, JAUNE, LUMINEUX, RESET, ROUGE, VERT
 """
 ce fichier gerèr le bannere de l'outil
 """

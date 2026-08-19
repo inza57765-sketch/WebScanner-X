@@ -1,5 +1,5 @@
 #####
-# dev notes
+# dev notes:
 ####
 
 Faute de frape dans le commit numéro 4:
