@@ -1,32 +1,36 @@
 
+
+#Explications du rôle de ce fichier
 """
 ce fichier est le cœur de l'outil
 sais lui qui met en place l'ordre donné par le fichier d'orchestre
 """
 
-######################################################|
-import requests                                      #|
-from .banner import Banner                           #|
-#from .logger import logger_run                      #|
-from .Terminal_Visualisation import affiches         #|
-from .couleur import BLEU, JAUNE, RESET, ROUGE, VERT #|
-######################################################|
 
-def Source_Code(url):
-        
-    #url = input("url : ")
-    #url = "http://localhost:8081"
+#Importations des bibliothèques et modules
+#######################################################|
+import requests                                       #|
+import subprocess as sub
+from .banner import Banner                            #|
+from .modules.HtmlCat import htmlcat_run              #|
+from .Terminal_Visualisation import affiches          #|
+from .couleurs import BLEU, JAUNE, RESET, ROUGE, VERT #|
+from .modules.pages_analyseur import pages_analyseur_func#|
+##################################################### #|
 
+#Fontions pour importer le code source facilement
+def Source_Code(base_url):
     Banner()
 
 
+    #Definire un  User-Agent
     headers = {
             "User-Agent":"Mozilla/5.0 (Windows NT 10.0;  Win64; x64) AppleWebKit/537.36"
     }
 
 
     try:
-        response                = requests.get(url, headers=headers, timeout=5)
+        response                = requests.get(base_url, headers=headers, timeout=5)
         status_code             = response.status_code
         server                  = response.headers.get(f"Server",                  f"{ROUGE}Non indiqué{RESET}")
         x_powered_by            = response.headers.get(f"X-Powered-By",            f"{VERT}Non indiqué{RESET} ")
@@ -36,7 +40,7 @@ def Source_Code(url):
         content_type            = response.headers.get(f"Content-Type",            f"{ROUGE}Non indiqué{RESET}")
 
         result = {
-            "url":url,
+            "url":base_url,
             "response":response,
             "status_code":status_code,
             "server":server,
@@ -50,7 +54,8 @@ def Source_Code(url):
 
         if response.status_code == 200:
             affiches(result)
-            #logger_run(result)
+            #htmlcat_run(result)
+            pages_analyseur_func(result)
 
 
 
@@ -64,26 +69,28 @@ def Source_Code(url):
         1. Désactivez le mode Avion.
         2. Activez les données mobiles ou le réseau Wi-Fi.
         3. Vérifiez le signal dans votre zone.
+        4. Ou la page est hors service.
 
     REQUESTS_CONNECT_EROR
         {RESET}""")
         print("-"*59)
         print("\n")
 
+    #Géré les exceptions
     ########################################################################|
     except requests.exceptions.InvalidURL:                                 #|
-        print("Erreur : url invalide\n")                                   #|
+        print("\nErreur : Url invalide.")                                  #|
     except requests.exceptions.MissingSchema:                              #|
-        print("Erreur : url invalide\n")                                   #|
+        print("\nErreur : Url invalide.")                                  #|
     except requests.exceptions.InvalidSchema:                              #|
-        print("Erreur : url invalide")                                     #|
+        print("\nErreur : Url invalide.")                                  #|
     except requests.exceptions.Timeout:                                    #|
-        print(f"\n{JAUNE}le site as mis trop de temps à repondre.{RESET}") #|
+        print(f"\n{JAUNE}Le site as mis trop de temps à repondre.{RESET}") #|
         print(f"{BLEU}Timeout{RESET}.\n")                                  #|
     except FileNotFoundError:                                              #|
-        print(f"\n{ROUGE}Erreur : fichier{RESET}")                         #|
-    #except FileExistsError:                                               #|
-        #print("\nErreur : fichier")                                       #|
+        print(f"\n{ROUGE}Erreur : Fichier introuvable.{RESET}")            #|
+    except FileExistsError:                                               #|
+        print("\nErreur : Fichier inexistant.")                           #|
     except KeyboardInterrupt:                                              #|
         print(f"\n{BLEU}Interruption clavier.{RESET}")                     #|
     ########################################################################|
