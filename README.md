@@ -3,20 +3,30 @@
 ce projet permet de scanner les headers de n'importe quel serveur web et detècté certains informations sensible à propos du serveur scanner
 
 ## Structures 🏗️
-
-~/WebScanner 
+```bash
 .
+├── Devs_notes.txt
 ├── README.md
 ├── WebScanner.py
+├── __init__.py
+├── configs
+│   ├── WebScanner.json
+│   └── settings.json
 ├── core
 │   ├── Terminal_Visualisation.py
-│   └── code.py
+│   ├── __init__.py
+│   ├── banner.py
+│   ├── code.py
+│   ├── couleurs.py
+│   └── modules
+│       ├── HtmlCat.py
+│       └── pages_analyseur.py
 ├── docs
 ├── requirements.txt
 └── test
 
-4 dossiers, 5 fichiers
-
+6 dossiers, 14 fichiers
+```
 ## Installation 🔧
 
 1. Clonez le dépôt

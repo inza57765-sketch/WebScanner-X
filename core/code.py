@@ -8,13 +8,15 @@ sais lui qui met en place l'ordre donné par le fichier d'orchestre
 
 
 #Importations des bibliothèques et modules
-######################################################|
-import requests                                      #|
-import subprocess as sub                             #|
-from .banner import Banner                           #|
-from .Terminal_Visualisation import affiches         #|
-from .couleurs import BLEU, JAUNE, RESET, ROUGE, VERT#|
-######################################################|
+#######################################################|
+import requests                                       #|
+import subprocess as sub
+from .banner import Banner                            #|
+from .modules.HtmlCat import htmlcat_run              #|
+from .Terminal_Visualisation import affiches          #|
+from .couleurs import BLEU, JAUNE, RESET, ROUGE, VERT #|
+from .modules.pages_analyseur import pages_analyseur_func#|
+##################################################### #|
 
 #Fontions pour importer le code source facilement
 def Source_Code(base_url):
@@ -52,6 +54,8 @@ def Source_Code(base_url):
 
         if response.status_code == 200:
             affiches(result)
+            #htmlcat_run(result)
+            pages_analyseur_func(result)
 
 
 

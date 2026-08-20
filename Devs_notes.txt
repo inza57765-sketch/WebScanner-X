@@ -1,0 +1,21 @@
+############
+# dev notes:
+############
+
+# inza57765-sketch
+Nouveau dossier et fichiers
+  1. j'ai créer un nouveau dossier/modules
+  2. dans le dossier/modules j'ai créer un fichier/HtmlCat
+  3. le fichier/HtmlCat permet de lire le html de la page 
+  4. J'ai créer un fichier/pages_analyseur dans le dossier modules
+     qui permet de d'analyser certains éléments de la page
+
+
+# inza57765-sketch
+Faute de frape dans le commit numéro 4:
+  nouvelle version plus structuré que la premièfe version
+
+# inza57765-sketch
+Faute de frape dans l'ecriture du commit 10:
+  ignoira
+ 
