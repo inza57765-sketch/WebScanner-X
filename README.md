@@ -51,4 +51,4 @@ ce projet permet de scanner les headers de n'importe quel serveur web et detèct
 vous pouvez aussi configuré l'outil depuis le fichier config.json
 
 ## Status
-*en développement*
+*(en développement)*
