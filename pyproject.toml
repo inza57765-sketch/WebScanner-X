@@ -1,0 +1,32 @@
+[project]
+name            = "WebScanner-X"
+version         = "1.5.0"
+description     = "Scanner de sites web en Python - CLI Tool"
+readme          = "README.md"
+authors         = [{name = "Toi"}]
+license         = "MIT"
+requires-python = ">=3.8"
+dependencies    = [
+    "requests",
+    "beautifulsoup4",
+    "colorama"
+]
+
+[project.scripts]
+WebScan = "WebScanner:WebScanner_run"
+
+
+[build-system]
+requires      = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"WebScanner" = "."}
+packages    = [
+    "WebScanner",
+    "WebScanner.core",
+    "WebScanner.core.modules",
+    "WebScanner.utils",
+    "WebScanner.configs"
+]
+
