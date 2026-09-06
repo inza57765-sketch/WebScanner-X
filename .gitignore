@@ -1,5 +1,11 @@
 log
 logs
+.env
+.venv
 .vscode
+help2.txt
+dev-links
+bibs-links
 __pycache__
-__pychache_/_
+__pychache_/
+WebScanner_X.egg-info

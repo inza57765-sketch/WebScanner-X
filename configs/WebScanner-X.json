@@ -1,0 +1,51 @@
+{
+  "package":"WebScanner-X",
+  "name":"WebScanner-X",
+  "version":"1.5.0",
+  "type":"Software-cli",
+  "Programming Language":"python==3.14.6",
+  "interface":"CLI",
+  "platforms":[
+    "linux",
+    "macOS",
+    "android/Termux"
+    ],
+
+  "files":[
+    "README.md",
+    "LICENSE",
+    "help.txt",
+    "settings.json",
+    "WebScanner-X.json",
+    "Devs-notes.txt",
+    "requirements.txt",
+    "packages.txt",
+    "install.sh",
+    "__init__.py",
+    "__main__.py",
+    "pyproject.toml",
+    "banner.py",
+    "Terminal_Visualisation.py",
+    "couleurs.py",
+    "project_lister.py",
+    "code.py",
+    "version.py",
+    "commands.py",
+    "cmdreadme.py",
+    "settings_calc.py",
+    "headers.py",
+    "dns_lookup.py",
+    "logger.py",
+    "aide.py",
+    "dev-links",
+    "bibs-links"
+    ],
+    "folders":[
+      "docs",
+      "utils",
+      "test",
+      "configs",
+      "core",
+      "modules"
+    ]
+}

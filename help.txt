@@ -1,0 +1,72 @@
+============================================================
+                     WebScanner-X
+============================================================
+
+Outil CLI d'analyse de serveurs Web.
+
+UTILISATION
+-----------
+
+    webscan [COMMANDE]
+
+
+OPTIONS DISPONIBLES
+--------------------
+
+    --scan <URL>
+        Lance l'analyse d'une cible Web.
+
+    --version
+        Affiche la version actuelle de WebScanner-X.
+
+    --readme
+        Affiche le README du projet.
+
+    --tree
+        Affiche l'arborescence du projet.
+
+    -h, --help
+        Affiche cette aide.
+
+
+EXEMPLES
+--------
+
+    webscan --scan https://example.com
+
+    webscan --version
+
+    webscan --readme
+
+    webscan --tree
+
+
+INFORMATIONS
+------------
+
+    Programme   : WebScanner-X
+    Version     : 1.5.0
+    Développeur : Cyber-Tchak
+    Licence     : MIT
+
+
+NOTES
+-----
+
+    WebScanner-X est actuellement en développement.
+
+    Certaines fonctionnalités peuvent évoluer dans les
+    prochaines versions.
+
+
+DÉPÔT
+-----
+
+    Pour signaler un problème ou contribuer au projet,
+    consultez le dépôt GitHub ci-dessus.
+
+    GitHub :
+    https://github.com/inza57765-sketch/WebScanner-X
+
+
+============================================================

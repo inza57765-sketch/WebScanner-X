@@ -1,21 +1,41 @@
+
 ############
-# dev notes:
+# DEV NOTES
 ############
 
+
+[2026-08-29]
 # inza57765-sketch
-Nouveau dossier et fichiers
-  1. j'ai créer un nouveau dossier/modules
-  2. dans le dossier/modules j'ai créer un fichier/HtmlCat
-  3. le fichier/HtmlCat permet de lire le html de la page 
-  4. J'ai créer un fichier/pages_analyseur dans le dossier modules
-     qui permet de d'analyser certains éléments de la page
+
+Nouveaux modules :
+  1. Création du dossier modules/
+  2. Création de modules/HtmlCat
+  3. HtmlCat permet de lire le HTML d'une page.
+  4. Création de modules/pages_analyseur
+  5. pages_analyseur permet d'analyser certains éléments de la page.
+------------------------------------------------------------
 
 
+[Commit #4]
 # inza57765-sketch
-Faute de frape dans le commit numéro 4:
-  nouvelle version plus structuré que la premièfe version
 
+Faute de frappe dans le message du commit :
+
+  "nouvelle version plus structuré que la premièfe version"
+
+Correction :
+
+  "nouvelle version plus structurée que la première version."
+------------------------------------------------------------
+
+
+[Commit #10]
 # inza57765-sketch
-Faute de frape dans l'ecriture du commit 10:
-  ignoira
- 
+
+Faute de frappe dans le message du commit :
+
+  "ignoira"
+
+Correction :
+  "ignorations"
+------------------------------------------------------------
