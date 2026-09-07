@@ -287,7 +287,7 @@ WebScanner-X/
 
 # ⚙️ Configuration
 
-Les fichiers de configuration se trouvent dans :
+Le fichiers de configuration se trouvent dans :
 
 ```text
 configs/
@@ -296,7 +296,6 @@ configs/
 Notamment :
 
 ```text
-configs/WebScanner-X.json
 configs/settings.json
 ```
 
