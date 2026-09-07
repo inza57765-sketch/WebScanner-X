@@ -9,10 +9,6 @@ from . import (
      project_tree
 )
 from .core.modules.dns_lookup import dns_trad
-
-
-
-
 def WebScanner_run():
     try:
         class WebScannerParser(argparse.ArgumentParser):
@@ -53,7 +49,7 @@ def WebScanner_run():
         group.add_argument(
             "--dns",
             metavar="DOMAINE",
-            help="Résoudre un domaine en une adresse ip"
+            help="Résoudre un domaine en une adresse ip."
         )
 
         group.add_argument(
@@ -102,9 +98,7 @@ def WebScanner_run():
 
 
     except KeyboardInterrupt:
-        print("\n")
-        print("WebScanner-X : Interruption Clavier.")
+        print("\nWebScanner-X : Interruption Clavier.")
 
     except Exception as erreur:
-        print("\n")
-        print(f"WebScanner-X : {erreur}.")
+        print(f"\nWebScanner-X : {erreur}.")

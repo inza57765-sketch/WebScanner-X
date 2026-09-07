@@ -4,8 +4,7 @@ import socket
 def dns_trad(domaine):
     try:
         domaine_ip = socket.gethostbyname(domaine)
-        print("\n")
-        print(f"domaine : {domaine}")
+        print(f"\ndomaine : {domaine}")
         print(f"IP      : {domaine_ip}")
 
 

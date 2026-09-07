@@ -6,5 +6,5 @@ from .project_lister import project_tree
 from .cmdreadme import cli_readme
 from .commands import WebScanner_run
 from .core.modules.dns_lookup import dns_trad
-
+from .core.couleurs import INIT, BLEU, JAUNE, RESET, ROUGE, VERT, LUMINEUX
 __version__ = "1.5.0"
