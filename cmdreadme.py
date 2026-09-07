@@ -5,10 +5,10 @@ def cli_readme():
         readme = Path(__file__).resolve().parent / "README.md"
 
         with readme.open("r", encoding="utf-8") as fichier:
-            print("\n")
-            print("WebScanner-X : README")
+            print("\nWebScanner-X : README")
             print(fichier.read())
+            print("\n")
 
     except FileNotFoundError:
-        print("WebScanner-X : README introuvable.")
+        print("\nWebScanner-X : README introuvable.")
 

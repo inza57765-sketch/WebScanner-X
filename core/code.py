@@ -3,14 +3,6 @@
 
 
 #Importations des bibliothèques et modules
-"""
-import   requests
-import   subprocess as sub
-from .   import Banner
-from .   import headers_func
-from .   import affiches
-from .   import BLEU, JAUNE, RESET, ROUGE, VERT
-"""
 
 import requests
 import subprocess as sub
@@ -31,7 +23,7 @@ def Source_Code(base_url):
     Banner()
 
 
-    #Definire un  User-Agent
+    # Definire un  User-Agent
     headers = {
             "User-Agent":"Mozilla/5.0 (Windows NT 10.0;  Win64; x64) AppleWebKit/537.36"
     }
@@ -72,7 +64,7 @@ def Source_Code(base_url):
 
 
 
-    #Géré les exceptions
+    # Géré les exceptions
     except requests.exceptions.ConnectionError:
         print(f"""{JAUNE}
 {ROUGE}Impossible d'établir une connexion avec la cible.{RESET}
@@ -98,7 +90,7 @@ def Source_Code(base_url):
         requests.exceptions.MissingSchema,
         requests.exceptions.InvalidURL
     ):
-        print("\nUrl invalide.")
+        print("\nWebScanner-X : Url invalide.")
 
 
 
@@ -107,7 +99,7 @@ def Source_Code(base_url):
         print(f"{BLEU}Timeout{RESET}.\n")
 
     except FileNotFoundError:
-        print(f"\n{ROUGE}Fichier introuvable.{RESET}")
+        print(f"\nWebScanner-X : {ROUGE}Fichier introuvable.{RESET}")
 
     except KeyboardInterrupt:
-        print(f"\n{BLEU}Interruption clavier.{RESET}")
+        print(f"\nWebScanner-X : {BLEU}Interruption clavier.{RESET}")

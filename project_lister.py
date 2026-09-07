@@ -1,10 +1,13 @@
 import subprocess as sub
 
 def project_tree():
-    tree = sub.run(["tree"], capture_output=True, text=True)
-    print("\n")
-    print("WebScanner-X : Tree")
-    print("-"*59)
+    try:
 
-    print(tree.stdout)
-    print("-"*59)
+        tree = sub.run(["tree"], capture_output=True, text=True)
+        print("\nWebScanner-X : Tree")
+        print(tree.stdout)
+        print("---"*16)
+
+    except FileNotFoundError:
+        print("\nWebScanner-X : paquet tree non installer")
+

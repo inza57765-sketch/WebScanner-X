@@ -3,8 +3,7 @@ def outil_aide():
         fichier_aide = "help.txt"
         with open(fichier_aide, "r", encoding="utf-8") as aide:
             read_help = aide.read()
-            print("\n")
-            print("WebScanner : aide")
+            print("\nWebScanner : aide")
             print(read_help)
             print("\n")
 
