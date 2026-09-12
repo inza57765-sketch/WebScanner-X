@@ -4,13 +4,17 @@ import socket
 def dns_trad(domaine):
     try:
         domaine_ip = socket.gethostbyname(domaine)
-        print(f"\ndomaine : {domaine}")
-        print(f"IP      : {domaine_ip}")
+        print(f"""
+─────────┬────────────────
+domaine  │ {domaine}
+IP       │ {domaine_ip}
+─────────┴────────────────
+        """)
 
 
     except socket.gaierror:
         print("\n")
-        print("WebScanner-X : Impossible d'établir une connexion avec la cible.")
+        print("WebScanner-X : Impossible résoud ce domaine.") #d'établir une connexion avec la cible.
         print("\n")
 
     except UnicodeEncodeError:

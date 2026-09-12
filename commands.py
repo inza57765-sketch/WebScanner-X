@@ -8,7 +8,10 @@ from . import (
      cli_readme,
      project_tree
 )
-from .core.modules.dns_lookup import dns_trad
+from .core.modules.dns_lookup  import dns_trad
+
+
+
 def WebScanner_run():
     try:
         class WebScannerParser(argparse.ArgumentParser):
@@ -16,7 +19,7 @@ def WebScanner_run():
             def error(self, message):
                 print("\n")
                 print(f"[WebScanner-X] : {message}")
-                print('Utilisez "webscan --help" pour obtenir de l’aide.')
+                print('Utilisez "WebScan --help" pour obtenir de l’aide.')
                 self.exit(2)
 
 
@@ -34,6 +37,7 @@ def WebScanner_run():
 
         parser.add_argument(
             "-h","--help", "--helps",
+            help="Afficher une aide Personnalisé.",
             action="store_true"
         )
         group = parser.add_mutually_exclusive_group(required=False)
@@ -78,6 +82,8 @@ def WebScanner_run():
             base_url = args.scan
             Source_Code(base_url)
 
+
+
         elif args.dns:
             dns_trad(args.dns)
 
@@ -95,6 +101,10 @@ def WebScanner_run():
 
         elif args.tree:
             project_tree()
+
+
+        else:
+            parser.print_help()
 
 
     except KeyboardInterrupt:
