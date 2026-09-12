@@ -2,10 +2,12 @@ log
 logs
 .env
 .venv
+dispam.
 .vscode
 help2.txt
 dev-links
 bibs-links
 __pycache__
-__pychache_/
+__pychache__/
+Devs_notes.txt
 WebScanner_X.egg-info

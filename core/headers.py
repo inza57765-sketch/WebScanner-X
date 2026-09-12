@@ -1,3 +1,8 @@
+"""
+Affichage :
+Mode      : Défaut
+"""
+
 def headers_func(result):
 
     print("\n\tla page est accessible....\n")

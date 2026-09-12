@@ -244,41 +244,50 @@ de communiquer correctement entre eux.
 La structure actuelle du projet est organisée ainsi :
 
 ```text
-WebScanner-X/
+WebScanner
+├── Devs_notes.txt
 ├── README.md
+├── WebScanner-X.png
 ├── __init__.py
 ├── __main__.py
 ├── aide.py
 ├── cmdreadme.py
 ├── commands.py
-├── configs/
-│   ├── WebScanner-X.json
-│   └── settings.json
-├── core/
-│   ├── __init__.py
-│   ├── Terminal_Visualisation.py
-│   ├── banner.py
-│   ├── code.py
-│   ├── couleurs.py
-│   ├── dns_lookup.py
-│   ├── headers.py
-│   ├── logger.py
-│   ├── modules/
-│   │   ├── __init__.py
-│   │   └── dns_lookup.py
-│   └── settings_calc.py
-├── docs/
+├── configs
+│   ├── WebScanner-X.json
+│   └── settings.json
+├── core
+│   ├── __init__.py
+│   ├── banner.py
+│   ├── code.py
+│   ├── couleurs.py
+│   ├── dns_lookup.py
+│   ├── headers.py
+│   ├── logger.py
+│   ├── modules
+│   │   ├── __init__.py
+│   │   ├── dispam.
+│   │   └── dns_lookup.py
+│   ├── normal_display.py
+│   ├── response_404.py
+│   └── settings_calc.py
+├── docs
+│   └── TODO.md
 ├── help.txt
+├── help2.txt
 ├── install.sh
 ├── packages.txt
 ├── project_lister.py
 ├── pyproject.toml
 ├── requirements.txt
-├── test/
-├── utils/
-│   ├── bibs-links/
-│   └── dev-links/
+├── robot-install.py
+├── test
+├── utils
+│   ├── bibs-links
+│   └── dev-links
 └── version.py
+
+7 dossiers, 35 fichiers
 ```
 
 > ℹ️ La structure du projet peut évoluer au cours du développement.

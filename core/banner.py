@@ -8,7 +8,7 @@ Banner de l'outil :
 INIT()
 def Banner():
     tool_name  = "WebScanner-X"
-    version    = "1.5.0"
+    version    = "1.5.5"
     dev        = "@Cyber-Tchak"
     start_time = datetime.now().strftime("%Y-%m-%d _ %H:%M:%S")
 
