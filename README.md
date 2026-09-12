@@ -3,7 +3,7 @@
 **WebScanner-X** est un outil CLI développé en Python permettant
 d'effectuer des analyses simples de serveurs Web et des résolutions DNS.
 
-> 🚧 Version actuelle : **1.5.0 — Projet en développement**
+> 🚧 Version actuelle : **1.5.5 — Projet en développement**
 
 ---
 
